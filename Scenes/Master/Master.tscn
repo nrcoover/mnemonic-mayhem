@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cpgqq74f37ae7"]
 
+[ext_resource type="Script" uid="uid://ckx7p6slsnl0l" path="res://Scenes/Master/Master.gd" id="1_1t0lv"]
 [ext_resource type="Texture2D" uid="uid://b73n4b3wnqsxg" path="res://Assets/images/backgroundEmpty.png" id="1_h6g34"]
 [ext_resource type="PackedScene" uid="uid://b0dxovca58l7j" path="res://Scenes/Main/Main.tscn" id="2_o4rt4"]
 [ext_resource type="PackedScene" uid="uid://dxnl1upsmlo26" path="res://Scenes/Game/Game.tscn" id="3_7tgqy"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1t0lv")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1286059233]
 layout_mode = 1
