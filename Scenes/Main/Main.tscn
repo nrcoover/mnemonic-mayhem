@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b0dxovca58l7j"]
+
+[ext_resource type="LabelSettings" uid="uid://b8wjycfvpgd42" path="res://Resources/TitleGreen96.tres" id="1_cmk6n"]
+[ext_resource type="PackedScene" uid="uid://cyy6xnbq46gfb" path="res://Scenes/LevelButton/LevelButton.tscn" id="2_i3fi7"]
+[ext_resource type="PackedScene" uid="uid://cip00syr5g3lx" path="res://Scenes/FrontSprite/FrontSprite.tscn" id="3_o8wgc"]
+
+[node name="Main" type="Control" unique_id=1108881907]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=121158421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47058824)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1551330129]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -988.0
+offset_top = -124.5
+offset_right = 988.0
+offset_bottom = 124.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 96
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=589444471]
+layout_mode = 2
+text = "Mnemonic Mayhem"
+label_settings = ExtResource("1_cmk6n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxLevels" type="HBoxContainer" parent="VBoxContainer" unique_id=116398120]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="LevelButton" parent="VBoxContainer/HBoxLevels" unique_id=128853267 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="VBoxContainer/HBoxLevels" unique_id=152605012 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton3" parent="VBoxContainer/HBoxLevels" unique_id=1619578994 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton4" parent="VBoxContainer/HBoxLevels" unique_id=1421272632 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton5" parent="VBoxContainer/HBoxLevels" unique_id=99011550 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton6" parent="VBoxContainer/HBoxLevels" unique_id=1476965472 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="HBoxSprites" type="HBoxContainer" parent="VBoxContainer" unique_id=1767643661]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 48
+
+[node name="FrontSprite" parent="VBoxContainer/HBoxSprites" unique_id=333981278 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VBoxContainer/HBoxSprites" unique_id=1714597206 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VBoxContainer/HBoxSprites" unique_id=1017820912 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VBoxContainer/HBoxSprites" unique_id=716124647 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+
+[node name="FrontSprite5" parent="VBoxContainer/HBoxSprites" unique_id=247523384 instance=ExtResource("3_o8wgc")]
+layout_mode = 2

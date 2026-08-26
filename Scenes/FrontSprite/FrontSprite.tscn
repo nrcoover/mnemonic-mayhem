@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cip00syr5g3lx"]
+
+[ext_resource type="Texture2D" uid="uid://dxxugt807n548" path="res://Assets/glitch/admin_widget.png" id="1_dw5qn"]
+
+[node name="FrontSprite" type="TextureRect" unique_id=333981278]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_dw5qn")
