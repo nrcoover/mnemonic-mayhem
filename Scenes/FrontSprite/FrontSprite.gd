@@ -24,7 +24,6 @@ func get_random_rotation() -> float:
 
 func run_tween() -> void:
 	var tween: Tween = create_tween()
-	tween.set_loops()
 	
 	var minimum_scale = 0.05
 	var maximun_scale = 1.0
@@ -35,5 +34,6 @@ func run_tween() -> void:
 	tween.tween_property(self, "scale", Vector2(maximun_scale, maximun_scale), duration)
 	tween.tween_property(self, "rotation", get_random_rotation(), get_random_spin_time())
 	
+	tween.tween_callback(run_tween)
 	
 	
