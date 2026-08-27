@@ -28,12 +28,14 @@ func run_tween() -> void:
 	var minimum_scale = 0.05
 	var maximun_scale = 1.0
 	var duration = 1.0
+	var tween_interval = 0.05
 	
 	tween.tween_property(self, "scale", Vector2(minimum_scale, minimum_scale), duration)
 	tween.tween_callback(set_random_item_image)
 	tween.tween_property(self, "scale", Vector2(maximun_scale, maximun_scale), duration)
 	tween.tween_property(self, "rotation", get_random_rotation(), get_random_spin_time())
 	
+	tween.tween_interval(tween_interval)
 	tween.tween_callback(run_tween)
 	
 	
