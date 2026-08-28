@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dk60mqtj2tuid" path="res://Assets/ui/green_button00.png" id="4_3k6gv"]
 [ext_resource type="Texture2D" uid="uid://dnknudsljmeqe" path="res://Assets/ui/yellow_button00.png" id="5_1q8bt"]
 [ext_resource type="PackedScene" uid="uid://hkse5dnjg0ux" path="res://Scenes/Scorer/Scorer.tscn" id="7_1q8bt"]
+[ext_resource type="PackedScene" uid="uid://dql3xqmhadqme" path="res://Scenes/GameOverUi/GameOverUi.tscn" id="8_gvja8"]
 
 [node name="Game" type="Control" unique_id=1752679722]
 layout_mode = 3
@@ -108,5 +109,20 @@ vertical_alignment = 1
 layout_mode = 2
 
 [node name="Scorer" parent="." unique_id=1551880487 instance=ExtResource("7_1q8bt")]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1329305263]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -199.5
+offset_right = 199.5
+offset_bottom = 158.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 64
+
+[node name="GameOverUi" parent="MarginContainer" unique_id=34931877 instance=ExtResource("8_gvja8")]
+visible = false
+layout_mode = 2
 
 [connection signal="pressed" from="HBox/VBox/ExitButton" to="." method="_on_exit_button_pressed"]

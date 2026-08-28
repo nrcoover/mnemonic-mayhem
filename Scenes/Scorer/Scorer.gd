@@ -48,6 +48,13 @@ func check_for_pair() -> void:
 		_pairs_made += 1
 
 
+func check_game_over() -> void:
+	if _pairs_made != _target_pairs:
+		enable_selection()
+	else:
+		SignalManager.emit_on_game_over(_moves_made)
+
+
 func process_pair() -> void:
 	if _selected_tiles.size() != 2: return
 	
@@ -107,5 +114,5 @@ func increment_moves_made() -> void:
 
 func _on_reveal_timer_timeout() -> void:
 	reset_selected_tiles()
-	enable_selection()
+	check_game_over()
 	clear_tiles()
