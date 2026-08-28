@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://hkse5dnjg0ux"]
+
+[ext_resource type="Script" uid="uid://dv15au4gsksnm" path="res://Scenes/Scorer/Scorer.gd" id="1_pmgxc"]
+
+[node name="Scorer" type="Node" unique_id=1551880487]
+script = ExtResource("1_pmgxc")
+
+[node name="RevealTimer" type="Timer" parent="." unique_id=830244867]
+one_shot = true
+
+[connection signal="timeout" from="RevealTimer" to="." method="_on_reveal_timer_timeout"]

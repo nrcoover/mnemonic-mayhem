@@ -22,5 +22,17 @@ func reveal(is_revealed: bool) -> void:
 	item_image.visible = is_revealed
 
 
+func matches_other_tile(other: MemoryTile) -> bool:
+	return other != self and other.item_image.texture == item_image.texture
+
+
+func kill_on_pair() -> void:
+	disabled = true
+	modulate = Color.TRANSPARENT
+
+
 func _on_pressed() -> void:
+	if !Scorer.SelectionEnabled: return
+	
 	reveal(true)
+	SignalManager.emit_on_tile_selected(self)
