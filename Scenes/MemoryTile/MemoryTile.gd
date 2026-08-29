@@ -27,8 +27,10 @@ func matches_other_tile(other: MemoryTile) -> bool:
 
 
 func kill_on_pair() -> void:
+	z_index = 10
 	disabled = true
-	modulate = Color.TRANSPARENT
+	
+	perform_pair_disappear_tween()
 
 
 func _on_pressed() -> void:
@@ -36,3 +38,22 @@ func _on_pressed() -> void:
 	
 	reveal(true)
 	SignalManager.emit_on_tile_selected(self)
+
+
+func perform_pair_disappear_tween() -> void:
+	var tween: Tween = create_tween()
+	tween.set_parallel(true)
+	
+	var duration: float = 0.5
+	
+	var degrees: int = 720
+	tween.tween_property(self, "rotation_degrees", degrees, duration)
+	
+	var scaler: float = 1.5
+	tween.tween_property(self, "scale", Vector2(scaler, scaler), duration)
+	
+	tween.set_parallel(false)
+	tween.tween_interval(duration)
+	
+	var short_duration: float = 0.2
+	tween.tween_property(self, "modulate", Color.TRANSPARENT, short_duration)
