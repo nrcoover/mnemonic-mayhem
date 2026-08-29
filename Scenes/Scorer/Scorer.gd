@@ -8,6 +8,7 @@ static var SelectionEnabled: bool = true
 
 
 @onready var reveal_timer: Timer = $RevealTimer
+@onready var pair_sound: AudioStreamPlayer = $PairSound
 
 
 var _selected_tiles: Array[MemoryTile]
@@ -46,6 +47,7 @@ func check_for_pair() -> void:
 		_selected_tiles[0].kill_on_pair()
 		_selected_tiles[1].kill_on_pair()
 		_pairs_made += 1
+		pair_sound.play()
 
 
 func check_game_over() -> void:

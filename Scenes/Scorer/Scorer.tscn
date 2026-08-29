@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://hkse5dnjg0ux"]
 
 [ext_resource type="Script" uid="uid://dv15au4gsksnm" path="res://Scenes/Scorer/Scorer.gd" id="1_pmgxc"]
+[ext_resource type="AudioStream" uid="uid://310hcg73ih5b" path="res://Assets/sounds/sfx_sounds_fanfare3.wav" id="2_0k60u"]
 
 [node name="Scorer" type="Node" unique_id=1551880487]
 script = ExtResource("1_pmgxc")
 
 [node name="RevealTimer" type="Timer" parent="." unique_id=830244867]
 one_shot = true
+
+[node name="PairSound" type="AudioStreamPlayer" parent="." unique_id=1056113752]
+stream = ExtResource("2_0k60u")
 
 [connection signal="timeout" from="RevealTimer" to="." method="_on_reveal_timer_timeout"]
